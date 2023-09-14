@@ -7,5 +7,7 @@ jobs:
       - uses: actions/checkout@master
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@master
+        with: 
+          cache: 'npm'
         env:
           SNYK_TOKEN: ${{ secrets.c7142dba-f031-4e83-b706-49550ca5bd8a }}
